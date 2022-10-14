@@ -90,7 +90,7 @@ function areEqual(addressOne, addressTwo){
   
 }
 
-const addressThree = new CreateAddress("Mo tower", "Lagos", 12345);
+const addressThree = new CreateAddress("Mo tower", "Lagos", 54321);
 const addressFour = new CreateAddress("Molinear tower", "Lagos", 12345)
 
 console.log(areEqual(addressThree, addressFour)) // true
