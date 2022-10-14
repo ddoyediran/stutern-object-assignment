@@ -16,3 +16,28 @@ function showAddress(anObj){
 }
   
   showAddress(objAddress)
+
+/** So in the last exercise we used the object literal syntax to initialize an address object. In this exercise, I want you to initialize an address 
+object, first using a factory function and then using a constructor function. So your exercise is to write two different functions, one is a factory 
+function, the other is a constructor function, to initialize an address object.  */
+
+/// Exercise 2 ///
+
+// Factory function
+
+function createAddress(street, city, zipCode){
+  return{
+    street,
+    city,
+    zipCode,
+    showAddress(){
+    	console.log(`Full address: ${street}, ${city}, ${zipCode}`)
+    }
+  }
+}
+
+const addOne = createAddress("Molinear tower", "Lagos", 12345)
+
+console.log(addOne["street"]) // 'Molinear tower'
+console.log(addOne["city"]) // 'Lagos'
+console.log(addOne.showAddress()) // 'Full address: Molinear tower, Lagos, 12345'
