@@ -44,21 +44,19 @@ console.log(addressOne["city"]) // 'Lagos'
 console.log(addressOne.showAddress()) // 'Full address: Molinear tower, Lagos, 12345'
 
 
-
-
-/// Constructor Function ////
+// Constructor Function //
 
 function CreateAddress(street, city, zipCode){
     this.street = street;
     this.city = city;
     this.zipCode = zipCode;
     this.showAddress = function(){
-    	console.log(`Full address: ${street}, ${city}, ${zipCode}`)
+    	console.log(`Full address: ${this.street}, ${this.city}, ${this.zipCode}`);
     }
 }
-
 
 const addressTwo = new CreateAddress("Molinear tower", "Lagos", 12345)
 
 console.log(addressTwo) // return { street: 'Molinear tower', city: 'Lagos', zipCode: 12345, showAddress: function (){ console.log(`Full address: ${street}, ${city}, ${zipCode}`) } }
 console.log(addressTwo.street) //'Molinear tower'
+console.log(addressTwo.showAddress()) //'Full address: Molinear tower, Lagos, 12345'
