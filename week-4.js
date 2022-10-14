@@ -21,6 +21,7 @@ function showAddress(anObj){
 object, first using a factory function and then using a constructor function. So your exercise is to write two different functions, one is a factory 
 function, the other is a constructor function, to initialize an address object.  */
 
+
 /// Exercise 2 ///
 
 // Factory function
@@ -36,8 +37,28 @@ function createAddress(street, city, zipCode){
   }
 }
 
-const addOne = createAddress("Molinear tower", "Lagos", 12345)
+const addressOne = createAddress("Molinear tower", "Lagos", 12345)
 
-console.log(addOne["street"]) // 'Molinear tower'
-console.log(addOne["city"]) // 'Lagos'
-console.log(addOne.showAddress()) // 'Full address: Molinear tower, Lagos, 12345'
+console.log(addressOne["street"]) // 'Molinear tower'
+console.log(addressOne["city"]) // 'Lagos'
+console.log(addressOne.showAddress()) // 'Full address: Molinear tower, Lagos, 12345'
+
+
+
+
+/// Constructor Function ////
+
+function CreateAddress(street, city, zipCode){
+    this.street = street;
+    this.city = city;
+    this.zipCode = zipCode;
+    this.showAddress = function(){
+    	console.log(`Full address: ${street}, ${city}, ${zipCode}`)
+    }
+}
+
+
+const addressTwo = new CreateAddress("Molinear tower", "Lagos", 12345)
+
+console.log(addressTwo) // return { street: 'Molinear tower', city: 'Lagos', zipCode: 12345, showAddress: function (){ console.log(`Full address: ${street}, ${city}, ${zipCode}`) } }
+console.log(addressTwo.street) //'Molinear tower'
