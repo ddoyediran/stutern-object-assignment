@@ -97,3 +97,22 @@ console.log(areEqual(addressThree, addressFour)) // true
 
 addressThree["country"] = "Sweden"; // one more property is added
 console.log(areEqual(addressThree, addressFour)) // false
+
+
+// using areSame function
+// Helper function: to check if both objects refernece the same object
+// INPUT: takes 2 object parameters as input
+// OUTPUT: returns true if they reference same object and false if otherwise
+function areSame(addressOne, addressTwo){
+  if(addressOne === addressTwo){
+    return true
+  }
+  
+  return false;
+}
+
+console.log(areSame(addressThree, addressFour)) // false
+
+const addressFive = addressThree
+
+console.log(areSame(addressThree, addressFive)) // true
