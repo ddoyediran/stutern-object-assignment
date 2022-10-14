@@ -65,8 +65,19 @@ console.log(addressTwo.showAddress()) //'Full address: Molinear tower, Lagos, 12
 
 /// Exercise 3 ///
 
-// using areEqual function
-// Helper function: to check if both objec has same properties
+/** Question: 
+In this exercise, we're going to use the constructor function that we created in the last exercise to create two address objects, address1 and address2. 
+I want you to create two functions. One is called areEqual, so we pass two address objects and we check to see if these two objects are equal. 
+Now as I told you before, objects are reference types, so we can have two objects with the exact same properties, but these objects are in different 
+memory locations, so when we use the equality operator we're essentially checking to see if these objects have the same reference. Now, to properly 
+check to see if two objects are equal, we need to check their properties, we need to make sure that all their properties are equal. So that's the job of 
+this function areEqual. If all the properties of these two objects are equal, this function should return true, otherwise it should return false. 
+Now the other function I want you to write is areSame. And this function simply tells us if address 1 and address 2 are pointed to the exact same object. 
+In other words, they're referencing the same object. Go ahead and solve this.
+*/
+
+// using areEqual function "Does a shallow check"
+// Helper function: to check if both objects has the same properties
 // INPUT: takes 2 object parameters as input
 // OUTPUT: returns true if they have same properties and false if otherwise
 function areEqual(addressOne, addressTwo){
@@ -100,7 +111,7 @@ console.log(areEqual(addressThree, addressFour)) // false
 
 
 // using areSame function
-// Helper function: to check if both objects refernece the same object
+// Helper function: to check if both objects reference the same object
 // INPUT: takes 2 object parameters as input
 // OUTPUT: returns true if they reference same object and false if otherwise
 function areSame(addressOne, addressTwo){
