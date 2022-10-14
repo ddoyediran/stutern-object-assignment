@@ -60,3 +60,40 @@ const addressTwo = new CreateAddress("Molinear tower", "Lagos", 12345)
 console.log(addressTwo) // return { street: 'Molinear tower', city: 'Lagos', zipCode: 12345, showAddress: function (){ console.log(`Full address: ${street}, ${city}, ${zipCode}`) } }
 console.log(addressTwo.street) //'Molinear tower'
 console.log(addressTwo.showAddress()) //'Full address: Molinear tower, Lagos, 12345'
+
+
+
+/// Exercise 3 ///
+
+// using areEqual function
+// Helper function: to check if both objec has same properties
+// INPUT: takes 2 object parameters as input
+// OUTPUT: returns true if they have same properties and false if otherwise
+function areEqual(addressOne, addressTwo){
+  // loop through both
+  let addOneKeys = Object.keys(addressOne);
+  let addTwoKeys = Object.keys(addressTwo);
+
+  // first is to check if they have same length
+  if(addOneKeys.length === addTwoKeys.length){
+    for(let i = 0; i < addOneKeys.length; i++){
+      if(addOneKeys[i] !== addTwoKeys[i]){
+         return false
+      }
+    }
+    
+    // then they have same property
+    return true
+  }
+  
+  return false
+  
+}
+
+const addressThree = new CreateAddress("Mo tower", "Lagos", 12345);
+const addressFour = new CreateAddress("Molinear tower", "Lagos", 12345)
+
+console.log(areEqual(addressThree, addressFour)) // true
+
+addressThree["country"] = "Sweden"; // one more property is added
+console.log(areEqual(addressThree, addressFour)) // false
