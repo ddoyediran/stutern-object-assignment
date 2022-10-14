@@ -127,3 +127,40 @@ console.log(areSame(addressThree, addressFour)) // false
 const addressFive = addressThree
 
 console.log(areSame(addressThree, addressFive)) // true
+
+
+
+/// Exercise Four ///
+/**
+In this exercise I want you to create a blog post object with these properties. title, body, author, views, which represents the number of 
+times this post has been viewed. Comments, now each comment should have a couple properties, author and body. And finally, another property, 
+that each post should have is isLive. Now that can be either true or false. So once again you should use the object literal syntax to create and 
+initialize a blog post. Give each property some value, the actual value doesn't really matter. I just want you to get comfortable with the object 
+literal syntax.
+*/
+
+
+let blogPost = {
+  title: "God is Great!",
+  body: "Lorem nostru exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute esse cillum dolore eu fugiat nulla pariatur",
+  author: "Jane Doe",
+  views: 5000,
+  comments:{
+    commentOne: {
+      author: "Johan D",
+      body: "100 percent on point"
+    }
+  },
+    isLive: true
+}
+
+
+blogPost["comments"].commentTwo = {
+  author: "XXD",
+  body: "I don't agree with JD"
+}
+
+
+console.log(blogPost)
+
+
