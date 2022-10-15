@@ -154,7 +154,7 @@ let blogPost = {
     isLive: true
 }
 
-
+// to add another comment
 blogPost["comments"].commentTwo = {
   author: "XXD",
   body: "I don't agree with JD"
@@ -165,7 +165,6 @@ console.log(blogPost)
 
 
 /// Exercise 5 ///
-
 
 let programming = {
     languages: ["JavaScript", "Python", "Ruby"],
@@ -211,7 +210,6 @@ for(let i = 0; i < programming["languages"].length; i++){
 for(let prop in programming){
   console.log(prop)
 }
-
 
 // Using a loop, console.log all of the values in the programming object
 for(let prop in programming){
